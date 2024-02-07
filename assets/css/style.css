@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: black;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.car-icon {
+    width: 15%;
+}
+
+.icon-hamburger {
+    width: 25%;
+}
+
+.electric-title {
+    color: aliceblue;
+    display: inline;
+    padding: 10px;
+}
+
+.menu-hamburguesa {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+
+}
+
+.menu {
+    display: none;
+}
+
+main {
+    text-align: center;
+    margin: 40px;
+}
+
+.card {
+    border: 1px solid gray;
+    background-color: #FFC32D;
+}
+
+.car-image {
+    width: 100%;
+}
+
+.car-model {
+    padding: 20px 0;
+}
+
+.button-ver {
+    margin-bottom: 20px;
+    padding: 10px 40px;
+    border-radius: 30px;
+    background-color: rgb(3, 89, 175);
+    color: white;
+    border: 1px solid rgb(14, 112, 209);
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+}
+
+.pagination li {
+    list-style-type: none;
+    border: 1px solid rgb(168, 168, 168);
+    padding: 10px 30px;
+}
+
+.pagination li:nth-child(2) {
+    background-color: #8832a8;
+    color: aliceblue;
+}
+
+
+footer {
+    background-color: black;
+    text-align: center;
+    color: aliceblue;
+    padding: 30px;
+    margin-top: 40px;
+}
+
+.icon-rrss {
+    width: 10%;
+}
