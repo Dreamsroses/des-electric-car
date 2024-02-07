@@ -39,7 +39,7 @@ nav {
     display: none;
 }
 
-main {
+.container {
     text-align: center;
     margin: 40px;
 }
@@ -93,4 +93,99 @@ footer {
 
 .icon-rrss {
     width: 10%;
+}
+
+.hidden {
+    display: none;
+}
+
+@media only screen and (min-width: 576px) {
+
+    main {
+        display: grid;
+        grid-template-columns: repeat(3, 200px);
+        justify-items: center;
+        height: 400px;
+        grid-template-areas:
+            "nav filter filter filter"
+            "nav container container container"
+            "nav container container container"
+            "footer container container container"
+    }
+
+    nav {
+        display: flex;
+        grid-area: nav;
+    }
+
+    .filters {
+        grid-area: filter;
+        background-color: #ada6af;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .dropdown{
+        background-color: white;
+        width: 80%;
+        margin: 20px;
+        padding: 10px;
+        text-align: left;
+    }
+
+    .container {
+        grid-area: container;
+        display: grid;
+        gap: 20px;
+    }
+
+    .container-card {
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        gap: 2%;
+    }
+
+    .pagination {
+        grid-area: pagination;
+        width: 100%;
+    }
+
+    footer {
+        grid-area: footer;
+        width: 100%;
+        margin: 0;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: center;
+    }
+
+    .menu a {
+        text-decoration: none;
+        color: aliceblue;
+    }
+
+    .icon-hamburger {
+        display: none;
+    }
+
+    .container {
+        display: grid;
+    }
+
+    .hidden {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .icon-rrss {
+        width: 24%;
+    }
+
+
 }
