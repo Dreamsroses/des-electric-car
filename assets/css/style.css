@@ -5,7 +5,7 @@
 }
 
 nav {
-    background-color: black;
+    background-color: rgb(11, 38, 83);
 }
 
 .logo {
@@ -28,11 +28,39 @@ nav {
     padding: 10px;
 }
 
+
+.filters {
+    grid-area: filter;
+    background-color: #ada6af;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.filters-order {
+    padding-top: 10px;
+}
+
+.dropdown {
+    background-color: white;
+    width: 80%;
+    margin: 20px;
+    padding: 5px;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.down-arrow {
+    width: 15px;
+}
+
 .menu-hamburguesa {
     display: flex;
     justify-content: space-between;
     padding: 20px;
-
 }
 
 .menu {
@@ -69,6 +97,7 @@ nav {
 .pagination {
     display: flex;
     justify-content: center;
+
 }
 
 .pagination li {
@@ -82,13 +111,13 @@ nav {
     color: aliceblue;
 }
 
-
 footer {
-    background-color: black;
+    background-color: rgb(0, 23, 54);
     text-align: center;
     color: aliceblue;
     padding: 30px;
     margin-top: 40px;
+    display: inline-block;
 }
 
 .icon-rrss {
@@ -110,7 +139,7 @@ footer {
             "nav filter filter filter"
             "nav container container container"
             "nav container container container"
-            "footer container container container"
+            "footer pagination pagination pagination"
     }
 
     nav {
@@ -118,28 +147,19 @@ footer {
         grid-area: nav;
     }
 
-    .filters {
-        grid-area: filter;
-        background-color: #ada6af;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-    }
-
-    .dropdown{
-        background-color: white;
-        width: 80%;
-        margin: 20px;
-        padding: 10px;
-        text-align: left;
-    }
-
     .container {
         grid-area: container;
-        display: grid;
         gap: 20px;
+        text-align: center;
+        margin: 40px;
+        height: calc(100vh);
+        display: flex;
+        gap: 10px;
+        flex-flow: column;
+        align-items: center;
+        overflow-y: auto;
     }
+
 
     .container-card {
         display: grid;
@@ -147,20 +167,32 @@ footer {
         gap: 2%;
     }
 
+    .container-pagination {
+        display: grid;
+        grid-template: 1fr / 100%;
+
+    }
+
     .pagination {
         grid-area: pagination;
         width: 100%;
+        margin-bottom: 50px;
     }
 
     footer {
         grid-area: footer;
         width: 100%;
         margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: end;
     }
 
     .menu {
         display: flex;
         justify-content: center;
+        padding: 6px;
     }
 
     .menu a {
@@ -176,6 +208,11 @@ footer {
         display: grid;
     }
 
+    .footer-paragraph {
+        font-size: 0.9rem;
+        margin-top: 20px;
+    }
+
     .hidden {
         display: flex;
         justify-content: center;
@@ -184,8 +221,26 @@ footer {
     }
 
     .icon-rrss {
-        width: 24%;
+        width: 40px;
+        height: 40px;
+    }
+}
+
+
+@media (min-width: 577px) and (max-width: 1090px) {
+
+    .container-card {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        gap: 2%;
     }
 
+    .container-pagination {
+        display: grid;
+        grid-template: 1fr / 50%;
+    }
 
+    .container {
+        height: calc(70vh);
+}
 }
